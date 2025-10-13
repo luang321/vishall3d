@@ -1,0 +1,45 @@
+
+
+dataset:   'kitti360' #"kitti" #
+
+batch_size: 4 #4 #32 #32 #64 #16 #32 #64 #32 #4 #4 #4 #4
+batch_size_val: 4
+#input_ch: [64,64,64,64] 
+
+n_gpus: 1
+num_workers_per_gpu: 1 #8 #16 #0 #1 #2
+exp_prefix: "a name"
+
+save_path : "a path"
+##########
+train_engine: "train_one_epoch"
+val_engine: "evaluate_standard" 
+#######
+###model conf
+generator: "models.wrapper.wrapper" 
+load_from: False
+sep_loss: False 
+#################
+vfnet: "models.modules.vfnet.vfnet"
+max_v: 3 #10 #12
+min_v: 1 #4
+c: 1 
+net_rgb:  "dino" 
+freeze_backbone: False
+#########
+mae: "models.modules.Hmae.HMAE"  
+dim_unet: 256 #240 # 256 #224 #256 #188 #256 #320 #512 #128 #224 #320 #512 #256 #
+dim_2d: 128 #128 #64 #64 #128 #64 #
+strides: [4,]
+#[4,8,16] #4 
+init_stride: 1 #0.5
+##############
+lr: 0.0001 #1e-4
+weight_decay:  0.0001 #1e-4
+
+start_val: 0 # 20
+val_rate: 3 #3
+milestones: [20,25]  #[10,13] #
+epochs: 30 #15 #
+seed: 0
+device: "cuda"
