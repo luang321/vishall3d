@@ -1,5 +1,6 @@
 # vishall3d
 # Installation Steps
+This is the official implementation of **VisHall3D**.
 
 1. Install **DFA** following its README instructions: [https://github.com/IDEA-Research/3D-deformable-attention](https://github.com/IDEA-Research/3D-deformable-attention)
 2. Install **MaskDINO** following its README instructions: [https://github.com/open-mmlab/mmdetection/pull/9808](https://github.com/open-mmlab/mmdetection/pull/9808)
