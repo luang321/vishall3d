@@ -8,3 +8,5 @@ This is the official implementation of **VisHall3D**.
 4. Set dataset paths in `misc.py`, and configure other paths in `confs`
 5. Run `train.py` (supports DDP training)
 6. Welcome to open an issue — we’ll help resolve it.
+
+For questions regarding the paper or the code, please send an email to [luhaoang@stu.xjtu.edu.cn](mailto:luhaoang@stu.xjtu.edu.cn).
